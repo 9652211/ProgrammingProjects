@@ -1,4 +1,6 @@
-# 2 programming projects for consideration
+# ProgrammingProjects
+
+2 programming projects for consideration
 
 # Programming Project #1: Chess
 OOP solution for chess clone. Points assigned to pieces captured.
