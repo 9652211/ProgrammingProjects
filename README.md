@@ -1,5 +1,4 @@
 # ProgrammingProjects
-
 2 programming projects for consideration
 
 # Programming Project #1: Chess
