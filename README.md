@@ -11,7 +11,7 @@ OOP solution for chess clone. Points assigned to pieces captured.
 ![Chess2](https://github.com/9652211/ProgrammingProjects/blob/main/images/StartGraphics.png?raw=true)
 
 ## GUI Image #3:
-![Chess3](https://github.com/9652211/ProgrammingProjects/blob/main/images/Chess3.png?raw=true)
+![Chess3](https://github.com/9652211/ProgrammingProjects/blob/main/images/ChessClose.png?raw=true)
 
 ## Class Diagram
 ![ChessMockup](https://github.com/9652211/ProgrammingProjects/blob/main/images/ChessMockup.png?raw=true)
