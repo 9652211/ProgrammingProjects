@@ -2,7 +2,7 @@
 2 programming projects for consideration
 
 # Programming Project #1: Chess
-OOP solution for chess clone. Points assigned to pieces captured.
+OOP solution for pawn-only chess clone. Player wins when pawn reaches the end. Points assigned to pieces captured.
 
 ## Final Project:
 [Windows EXE](https://github.com/9652211/ProgrammingProjects/blob/main/app/application.windows.zip)
