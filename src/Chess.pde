@@ -19,9 +19,9 @@ void setup() {
   king1 = new King(5, 8, true, true);
   king2 = new King(5, 1, true, false);
   for(int i=0; i<8; i++) {
-      pawns1.add(new Pawn(i+1, 7, true, true));
-      pawns2.add(new Pawn(i+1, 2, true, false));
-    }
+    pawns1.add(new Pawn(i+1, 7, true, true));
+    pawns2.add(new Pawn(i+1, 2, true, false));
+  }
   activeMove = false;
   whiteTurn = true;
 }
@@ -81,6 +81,14 @@ void draw() {
       //if(pawn2.selected()) {
       //  pawn2.move();
       //}
+      if(pawn1.y==1) {
+        player1Win = true;
+        end = true;
+      }
+      if(pawn2.y==8) {
+        player2Win = true;
+        end = true;
+      }
     }
     
   }
@@ -402,11 +410,17 @@ void endScreen() {
   fill(123, 111, 90);
   rect(400, 300, 20, 100);
   if(player1Win) {
-    fill(0, 255,0, 127);
-    rect(0, 100, 1000, 175);
+    fill(0, 255, 0, 127);
+    rect(0, 100, 1200, 175);
     fill(0);
     text("Player 1 Info: You Win!!!", 500, 150);
     text("Player 2 Info: You Lose", 500, 600);
+  } else if(player2Win) {
+    fill(0, 255, 0, 127);
+    rect(0, 550, 1200, 175);
+    fill(0);
+    text("Player 1 Info: You Lose", 500, 150);
+    text("Player 2 Info: You Win!!!", 500, 600);
   }
   fill(0);
   text("Points: " + player1Points + "     Moves: " + player1Moves, 500, 200);
