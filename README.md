@@ -4,6 +4,9 @@
 # Programming Project #1: Chess
 OOP solution for chess clone. Points assigned to pieces captured.
 
+# Final Project:
+
+
 ## GUI Image #1:
 ![Chess1](https://github.com/9652211/ProgrammingProjects/blob/main/images/ChessIntro.png?raw=true)
 
