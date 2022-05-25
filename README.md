@@ -5,7 +5,8 @@
 OOP solution for chess clone. Points assigned to pieces captured.
 
 ## Final Project:
-
+[Windows EXE](https://github.com/9652211/ProgrammingProjects/blob/main/app/application.windows.zip)
+[Mac App](https://github.com/9652211/ProgrammingProjects/blob/main/app/application.macosx.zip)
 
 ## GUI Image #1:
 ![Chess1](https://github.com/9652211/ProgrammingProjects/blob/main/images/ChessIntro.png?raw=true)
