@@ -157,6 +157,7 @@ void mousePressed() {
         //}
         if(validMove) {
           king1.move(mouseX, mouseY);
+          king1.check = false;
           player1Moves++;
           whiteTurn = false;
         } else {
@@ -189,9 +190,13 @@ void mousePressed() {
             if((s(mouseX)==king1.x&&s(mouseY)==king1.y)||(s(mouseX)==king2.x&&s(mouseY)==king2.y)) {
               validMove = false;
             }
+            if(king1.check&&!(s(mouseX)==king1.checker.x&&s(mouseY)==king1.checker.y)) {
+              println("Invalid Move");
+              validMove = false;
+            }
             for(int j = 0; j<8; j++) {
               Pawn pawn = pawns2.get(j);
-              if((s(mouseX)==pawn.x && s(mouseY) == pawn.y)&&(pawn.y==pawn1.y-1&&(pawn.x==pawn1.x+1||pawn.x==pawn1.x-1))) {
+              if((!king1.check||(king1.check&&pawn==king1.checker))&&((s(mouseX)==pawn.x && s(mouseY) == pawn.y)&&(pawn.y==pawn1.y-1&&(pawn.x==pawn1.x+1||pawn.x==pawn1.x-1)))) {
                 println("Valid move");
                 validMove = true;
                 player1Points++;
@@ -201,9 +206,15 @@ void mousePressed() {
                 validMove = false;
               }
             }
+            
             if(validMove) {
               pawn1.move(mouseX, mouseY);
+              if((pawn1.x==king2.x+1||pawn1.x==king2.x-1)&&pawn1.y==king2.y+1) {
+                king2.check = true;
+                king2.checker = pawn1;
+              }
               pawn1.firstMove = false;
+              king1.check = false;
               player1Moves++;
               whiteTurn = false;
             } else {
@@ -278,6 +289,7 @@ void mousePressed() {
         //}
         if(validMove) {
           king2.move(mouseX, mouseY);
+          king2.check = false;
           player2Moves++;
           whiteTurn = true;
         } else {
@@ -307,9 +319,13 @@ void mousePressed() {
                 validMove = false;
               }
             }
+            if(king2.check&&!(s(mouseX)==king2.checker.x&&s(mouseY)==king2.checker.y)) {
+              println("Invalid Move");
+              validMove = false;
+            }
             for(int j = 0; j<8; j++) {
               Pawn pawn = pawns1.get(j);
-              if((s(mouseX)==pawn.x && s(mouseY) == pawn.y)&&(pawn.y==pawn2.y+1&&(pawn.x==pawn2.x+1||pawn.x==pawn2.x-1))) {
+              if((!king2.check||(king2.check&&pawn==king2.checker))&&((s(mouseX)==pawn.x && s(mouseY) == pawn.y)&&(pawn.y==pawn2.y+1&&(pawn.x==pawn2.x+1||pawn.x==pawn2.x-1)))) {
                 println("Valid move");
                 validMove = true;
                 player2Points++;
@@ -324,6 +340,11 @@ void mousePressed() {
             }
             if(validMove) {
               pawn2.move(mouseX, mouseY);
+              if((pawn2.x==king1.x+1||pawn2.x==king1.x-1)&&pawn2.y==king1.y-1) {
+                king1.check = true;
+                king1.checker = pawn2;
+              }
+              king2.check = false;
               pawn2.firstMove = false;
               player2Moves++;
               whiteTurn = true;
