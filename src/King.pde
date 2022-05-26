@@ -6,6 +6,7 @@ class King {
   boolean active = false;
   boolean selected = false;
   boolean check = false;
+  Pawn checker;
   
   King(int x, int y, boolean displayed, boolean white) {
     this.x = x;
