@@ -393,16 +393,15 @@ void startScreen() {
   fill(0);
   textSize(25);
   text("This game is played just like chess, removing all pieces but the pawns and king.", 600, 550);
-  text("It is a 2-player game, taking turns to move. White goes first.", 600, 600);
+  text("It is a 2-player game, alternating turns to move. White goes first.", 600, 600);
   text("Pawns can move in two ways: ", 600, 650);
   text("1. Forward 1 space. If it is your first turn, you have the option of moving it forward 2 spaces.", 600, 700);
-  text("2. If a piece is forward and diagonal from the pawn, the pawn may capture that piece.", 600, 750);
+  text("2. If an opposing piece is forward and diagonal from the pawn, the pawn may capture that piece.", 600, 750);
   text("If the piece is directly in front of it, the pawn cannot move.", 600, 800);
-  text("If a pawn reaches the end of the board, it turns into a queen.", 600, 850);
-  text("Kings can move forward, backward, left, right, or diagonal, but just by 1 space.", 600, 900);
-  text("A king is in check if a piece may capture it in the next turn if it does not move.", 600, 950);
-  text("If a king is in check, it is required to get out of check the very next move.", 600, 1000);
-  text("Whoever gets their pawn to the end first, wins!!!", 600, 1050);
+  text("Kings can move forward, backward, left, right, or diagonal, but just by 1 space.", 600, 850);
+  text("A king is in check if a piece may capture it in the next turn if it does not move.", 600, 900);
+  text("If a king is in check, it is required to get out of check the very next move.", 600, 950);
+  text("Whoever gets their pawn to the end of the board first, wins!!!", 600, 1000);
   textSize(75);
   text("Click anywhere to begin!", 600, 1150);
   if(mousePressed) {
